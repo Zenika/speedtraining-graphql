@@ -11,6 +11,7 @@ Pour bien démarrer ce speed training, vous devez avoir
 
 Nous allons mettre en place un serveur GraphQL (apollo mais pourquoi pas un autre si vous êtes joueur)
 
+- Cloner le projet et installer les dépendances avec un `pnpm install`.
 - Rendez-vous dans le dossier `packages/graphql-server`, et instanciez un nouveau `ApolloServer` dans le fichier `src/index.js`
 - Créez un schéma dans un fichier `schema.js` avec les types suivant
 
@@ -207,7 +208,7 @@ Nous allons à présent gérer les mutations.
 - Créer une pagination sur les personnages des livres sur votre serveur.
 - Créer la pagination côté client avec la gestion du cache et l'usage d'un bouton.
 
-Bonus 2
+## Bonus 2
 
 - Utiliser un poll, pour mettre à jour automatiquement le nombre de favoris
 
