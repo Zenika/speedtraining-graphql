@@ -1,0 +1,50 @@
+.item-article {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.item-article h3 {
+  font-size: 1.2rem;
+}
+
+.item-article li {
+  font-size: 1rem;
+}
+
+.item-list {
+  display: grid;
+  grid-template-rows: repeat(8, auto);
+  grid-auto-flow: column;
+  grid-gap: 20px 8px;
+  overflow: scroll;
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+}
+
+.favorite-button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  transition: all 0.3s;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.favorite-button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.favorite-button span {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

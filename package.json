@@ -1,0 +1,11 @@
+{
+  "name": "@speedtraining-graphql/graphql-server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "prettier": "^2.4.1"
+  }
+}
