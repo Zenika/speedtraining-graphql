@@ -1,3 +1,5 @@
-const server = server.listen().then(({ url }) => { // TODO
+const server = null; // TODO
+
+server.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
 });
