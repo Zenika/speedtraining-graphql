@@ -1,20 +1,24 @@
 import {ApolloServer, gql} from "apollo-server";
-import {ApolloServerPluginLandingPageGraphQLPlayground} from "apollo-server-core";
-import {MySampteDatasource} from "./sample-datasources.js";
+import {BaseRedisCache} from 'apollo-server-cache-redis'
+import Redis from 'ioredis'
+import {MySampteDatasource} from "./sample-datasources.js"
 
-const schema = gql``
+
+const typeDefs = gql``
 
 const server = new ApolloServer({
-  plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
   resolvers: {},
-  schema: schema,
-  dataSources: {
+  typeDefs,
+  cache: new BaseRedisCache({
+    client: new Redis({
+      host: 'localhost',
+    }),
+  }),
+  dataSources: () => ({
     sample: new MySampteDatasource()
-  }
-}); // TODO
-
-
+  }),
+});
 
 server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
+  console.log(`🚀 Server ready at ${url}`);
 });
