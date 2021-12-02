@@ -76,7 +76,7 @@ type House {
 
 - Implémentez maintenant le serveur graphql à l'aide d'un fichier `resolver` en utilisant l'API [https://anapioficeandfire.com/](https://anapioficeandfire.com/) et en vous aidant de la [documentation](https://www.apollographql.com/docs/apollo-server/data/resolvers/)
 
-  - Dans un premier temps, ne vous occuper pas des nested values
+  - Dans un premier temps, ne vous occupez pas des nested values
 
 - Utilisez un cache Redis pour éviter d'atteindre le rating limit
 
@@ -90,7 +90,7 @@ docker run --name redis-got -p 6379:6379 -d redis
   - récupérez les noms des personnages du livre #1
   - récupérez les noms des personnages que l'on suit (POV) dans le livre #1
   - récupérez le nom de l'époux/épouse du personnage #339
-  - récupérez le nom de la maison de l'allegance du personnage #339
+  - récupérez le nom des maisons de l'allegance du personnage #339
   - récupérez les noms des livres dans lequel le personnage #339 apparait et aussi en POV
   - récupérez le nom du seigneur actuel, de l'héritier, du fondateur et des membres de la maison #17
   - récupérez les branches cadettes

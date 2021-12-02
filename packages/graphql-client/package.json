@@ -2,9 +2,9 @@
   "name": "speedtraining-graphql-client",
   "version": "0.0.0",
   "scripts": {
-    "dev": "../../../speedtraining-graphql-client/node_modules/.bin/vite",
-    "build": "../../../speedtraining-graphql-client/node_modules/.bin/vite build",
-    "serve": "../../../speedtraining-graphql-client/node_modules/.bin/vite preview"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "dependencies": {
     "@apollo/client": "^3.4.16",
