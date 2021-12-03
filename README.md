@@ -152,11 +152,10 @@ Ajoutez une mutation dans notre schéma pour ajouter un favori en utilisant le s
 - Modifiez le schéma graphql pour ajouter un attribut `numberOfFavorites` dans les types Book, House et Character, puis implémenter cette fonctionnalité.
 - Modifiez le schéma graphql pour ajouter un attribut `isFavorite` dans les types Book, House et Character, puis implémenter cette fonctionnalité qui se basera sur l'attribut `token` du context.
 
-> Par défaut RESTDataSource memoïze toutes les requêtes GET 💩, pour éviter cela vous pouvez configurer sa clé de mémoïzation pour qu'elle soit différente à chaque fois
+> Pour désactiver la mise en cache pour une requête particulière, il est possible de spécifier des `cacheOptions` particulières :
 >
 > ```js
-> // Made a cache for every seconds
-> cacheKeyFor = (request) => `${request.url}_${Math.ceil(new Date().getTime() / 1000)}`;
+> return this.get(`resources/${id}`, null, { cacheOptions: { ttl: 0 }}
 > ```
 
 ## Partie 4 - Client JS
