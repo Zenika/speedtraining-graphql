@@ -1,6 +1,6 @@
 # Speed Training GraphQL
 
-## Avant props
+## Avant propos
 
 Pour bien démarrer ce speed training, vous devez avoir
 
