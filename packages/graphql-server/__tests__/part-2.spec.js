@@ -48,17 +48,11 @@ describe('Partie 2', () => {
     });
   });
   describe('character', () => {
-    it('should get the character parents', async () => {
+    it('should get the character spouse', async () => {
       const query = {
         query: gql`
-          query get_characters_parents {
+          query get_characters_spouse {
             character(id: 339) {
-              father {
-                name
-              }
-              mother {
-                name
-              }
               spouse {
                 name
               }
@@ -70,8 +64,6 @@ describe('Partie 2', () => {
       const result = await reqGql(query);
       const character = result.data.character;
 
-      // expect(character.father.name).toEqual()
-      // expect(character.mother.name).toEqual()
       expect(character.spouse.name).toEqual('Catelyn Stark');
     });
 
