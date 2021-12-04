@@ -126,7 +126,6 @@ GET /favorite?url=https://anapioficeandfire.com/api/characters/583
 Démarrer ce serveur en utilisant
 
 ```
-pnpm install
 pnpm start
 ```
 
