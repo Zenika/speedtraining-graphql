@@ -1,5 +1,6 @@
 import { gql } from 'apollo-server';
 import { reqGql } from './utils';
+const BASE_URL = 'https://anapioficeandfire.com'
 
 describe('Partie 1', () => {
   it('should get the list of books', async () => {
@@ -26,7 +27,7 @@ describe('Partie 1', () => {
 
     expect(books).toHaveLength(10);
 
-    expect(books[0].url).toEqual('https://anapioficeandfire.com/api/books/1');
+    expect(books[0].url).toEqual(`${BASE_URL}/api/books/1`);
     expect(books[0].name).toEqual('A Game of Thrones');
     expect(books[0].isbn).toEqual('978-0553103540');
     expect(books[0].authors).toEqual(['George R. R. Martin']);
@@ -59,7 +60,7 @@ describe('Partie 1', () => {
     const result = await reqGql(query);
     const book = result.data.book;
 
-    expect(book.url).toEqual('https://anapioficeandfire.com/api/books/2');
+    expect(book.url).toEqual(`${BASE_URL}/api/books/2`);
     expect(book.name).toEqual('A Clash of Kings');
     expect(book.isbn).toEqual('978-0553108033');
     expect(book.authors).toEqual(['George R. R. Martin']);
@@ -93,7 +94,7 @@ describe('Partie 1', () => {
     const result = await reqGql(query);
     const house = result.data.house;
 
-    expect(house.url).toEqual('https://anapioficeandfire.com/api/houses/378');
+    expect(house.url).toEqual(`${BASE_URL}/api/houses/378`);
     expect(house.name).toEqual("House Targaryen of King's Landing");
     expect(house.region).toEqual('The Crownlands');
     expect(house.coatOfArms).toEqual('Sable, a dragon thrice-headed gules');
@@ -132,7 +133,7 @@ describe('Partie 1', () => {
     const result = await reqGql(query);
     const character = result.data.character;
 
-    expect(character.url).toEqual('https://anapioficeandfire.com/api/characters/583');
+    expect(character.url).toEqual(`${BASE_URL}/api/characters/583`);
     expect(character.name).toEqual('Jon Snow');
     expect(character.gender).toEqual('Male');
     expect(character.culture).toEqual('Northmen');
