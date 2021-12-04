@@ -81,7 +81,7 @@ type House {
 - Utilisez un cache Redis pour éviter d'atteindre le rating limit
 
 ```sh
-docker run --name redis-got -p 6379:6379 -d redis
+docker-compose up -d
 ```
 
 ## Partie 2 - Nested queries
