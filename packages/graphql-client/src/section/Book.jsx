@@ -3,8 +3,7 @@ import { DisplayItem, DisplayItemList } from '../components/DisplayItem';
 
 export const Book = () => {
   let { id } = useParams();
-  const loading = true; // TODO query
-  const data = null; // TODO query
+  const { loading, data } = { loading: true, data: null }; // TODO query
 
   const addToFavorite = () => {}; // TODO mutation
   const removeFromFavorite = () => {}; // TODO mutation

@@ -1,8 +1,7 @@
 import { DisplayItem } from '../components/DisplayItem';
 
 export const Books = () => {
-  const loading = true; // TODO query
-  const data = null; // TODO query
+  const { loading, data } = { loading: true, data: null }; // TODO query
 
   const addToFavorite = () => {}; // TODO mutation
   const removeFromFavorite = () => {}; // TODO mutation
